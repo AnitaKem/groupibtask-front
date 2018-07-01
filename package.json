@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
@@ -21,9 +21,7 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
-    "angular-notifier": "^3.0.0",
     "core-js": "^2.4.1",
-    "ng-snotify": "^4.3.1",
     "ng2-toastr": "^4.1.2",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
