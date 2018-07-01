@@ -1,0 +1,24 @@
+<h3>Admin</h3>
+
+<div class="records">
+  <div class="pa4">
+    <div class="overflow-auto">
+      <table class="f6 w-100 mw8 tc center" cellspacing="0">
+        <thead>
+          <tr>
+            <th class="fw6 bb b--black-20 pb3 pr3 bg-white">Time</th>
+            <th class="fw6 bb b--black-20 pb3 pr3 bg-white">Username</th>
+            <th class="fw6 bb b--black-20 pb3 pr3 bg-white">Text</th>
+          </tr>
+        </thead>
+        <tbody class="lh-copy">
+          <tr *ngFor="let record of records">
+            <td class="pv3 pr3 bb b--black-20">{{ record.time | date:'medium' }}</td>
+            <td class="pv3 pr3 bb b--black-20">{{ record.user ? record.user.name : "" }}</td>
+            <td class="pv3 pr3 bb b--black-20">{{ record.text }}</td>
+          </tr>          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

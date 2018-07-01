@@ -1,0 +1,11 @@
+<nav class="bt bb tc center mt4">  
+  <a class="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l" href="/" title="Home">Home</a>
+  <a routerLinkActive="active b" class="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l" routerLink="/public" title="Public">Public</a>
+  <a *ngIf="isSection1Available" routerLinkActive="active b" class="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l" routerLink="/private1" title="Private 1">Private 1</a>
+  <a *ngIf="isSection2Available" routerLinkActive="active b" class="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l" routerLink="/private2" title="Private 2">Private 2</a>
+  <a *ngIf="isSection3Available" routerLinkActive="active b" class="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l" routerLink="/private3" title="Private 3">Private 3</a>
+  <a *ngIf="isSectionAdminAvailable" routerLinkActive="active b" class="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l" routerLink="/admin" title="Private 3">Admin</a>
+  <a *ngIf="!isLoggedIn" routerLinkActive="active b" class="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l" routerLink="/login" title="Login">Login</a>
+  <p *ngIf="username" class="tr i ml7" style="display:inline;">Hello, {{ username }}</p>
+  <a *ngIf="isLoggedIn" class="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l btn" (click)="logout()" title="Logout">Log out</a>
+</nav>

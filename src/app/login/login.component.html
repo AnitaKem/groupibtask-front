@@ -1,0 +1,23 @@
+<main class="pa4 black-80">
+  <form [formGroup]="loginForm" class="measure center">
+    <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
+      <div class="mt3">
+        <label class="db fw6 lh-copy f6" for="email">Email</label>
+        <input formControlName="emailFormControl" class="pa2 input-reset ba bg-transparent w-100" type="text" name="email"  id="email">
+      </div>
+      <div class="mv3">
+        <label class="db fw6 lh-copy f6" for="password">Password</label>
+        <input formControlName="passwordFormControl" class="b pa2 input-reset ba bg-transparent w-100" type="password" name="password"  id="password">
+      </div>
+    </fieldset>
+    <div class="alert alert-danger" *ngIf="loginForm.errors && loginForm.errors.incorrectPassword">
+        Incorrect user or password
+      </div>
+    <div class="">
+      <input [disabled]="loginForm.invalid" class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Login" (click)="login()">
+    </div>    
+  </form>
+</main>
+
+
+
