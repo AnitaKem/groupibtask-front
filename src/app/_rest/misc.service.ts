@@ -5,7 +5,7 @@ export class MiscService {
 
   constructor() { }
 
-  public static apiBaseUrl = 'https://polar-sierra-37133.herokuapp.com/api/';//"http://localhost:3000/api/";
+  public static apiBaseUrl = 'https://polar-sierra-37133.herokuapp.com/api/';
 
   public static Sections = {    
     section1: 1,

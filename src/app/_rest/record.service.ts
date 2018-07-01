@@ -3,7 +3,7 @@ import { Record } from "../_models/Record";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AuthService } from './auth.service';
 import { MiscService } from './misc.service';
-import { switchMap, map, catchError} from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { LocalStorageService } from './local-storage.service';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
@@ -48,7 +48,7 @@ export class RecordService {
       return this.http
       .post<Record>(this.urlBaseRecord, record, { headers: new HttpHeaders().set('x-access-token', this.authService.getAuthorizationHeader()) })
       .pipe(
-        map(records => new Record(record))
+        map(record => new Record(record))
       );
     } else {
       record.time = new Date();
